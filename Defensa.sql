@@ -1,5 +1,4 @@
 --1
-
 CREATE VIEW view1 AS
 (
 SELECT e.marcaEquipo, count(e.codEquipo)[cantidad]
