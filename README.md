@@ -39,14 +39,14 @@ Determina cuáles enlaces forman parte de cada Trunk. Por cada Trunk participan 
 
 ## Informe de la Solución
 
-La solución entregada, en cada instancia (restricciones, índices, datos de prueba, funciones y procedimientos, disparadores, consultas y vistas) se apega fielmente al pedido de la letra. Los casos en los que no fue posible cumplir exactamente con la letra son descritos a continuación, con una respectiva solución alternativa.
+La solución entregada, en cada instancia (restricciones, índices, datos de prueba, funciones y procedimientos, disparadores, consultas y vistas) se apega fielmente a los requisitos del cliente. Los casos en los que no fue posible cumplir exactamente con los requisitos son descritos a continuación, con una respectiva solución alternativa.
 
 ### Casos de Ambigüedad 
 
 #### Disparador trig5_a
 "Crear el disparador trig5_a para que una vez ingresado un Trunk se genere un registro Enlace_Trunk para cada sucursal que compone dicho Trunk".
 
-En este caso la letra presenta una ambigüedad, nos pide generar un registro Enlace_Trunk por cada sucursal que compone dicho Trunk. Esto quiere decir que el flujo normal del disparador sería insertar 2 registros en la tabla Enlace_Trunk, uno por cada sucursal implicada en el Trunk (sucursal de origen y sucursal de destino).
+En este caso, los requisitos presentan una ambigüedad, ya que piden generar un registro Enlace_Trunk por cada sucursal que compone dicho Trunk. Esto quiere decir que el flujo normal del disparador sería insertar 2 registros en la tabla Enlace_Trunk, uno por cada sucursal implicada en el Trunk (sucursal de origen y sucursal de destino).
 
 En cambio, el disparador genera tantos registros como enlaces relacionados a esas sucursales existan en la tabla Enlace. Esto se debe a que en la tabla Enlace puede existir más de un registro que implique la misma sucursal, ya que las sucursales pueden tener enlaces con diferentes ISP (proveedores de internet) y/o diferentes tipos de enlace.
 
